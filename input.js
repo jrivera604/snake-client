@@ -1,6 +1,8 @@
 
+let connection;
 
-const setupInput = function () {
+const setupInput = function (conn) {
+  connection = conn;
   const stdin = process.stdin;
   stdin.on("data", handleUserInput);
 
@@ -14,6 +16,27 @@ const handleUserInput = function (key) {
   if (key === '\u0003') {
     process.exit();
   } 
+
+  if (key === 'd') {
+    connection.write('Move: right')
+    console.log(key)
+  }
+
+  if (key === 'w') {
+    connection.write('Move: up')
+    console.log(key)
+  }
+
+  if (key === 'a') {
+    connection.write('Move: left')
+    console.log(key)
+  }
+
+  if (key === 's') {
+    connection.write('Move: down')
+    console.log(key)
+  }
+
 };
 
 module.exports = setupInput

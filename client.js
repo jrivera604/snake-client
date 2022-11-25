@@ -9,17 +9,10 @@ const connect = function () {
   conn.on("connect", () => {
     conn.write('JRR');
     console.log("Successfully connected to game server");
-    setTimeout(()=> {
-      conn.write('Move: up');
-    }, 500)
 
-    setTimeout(()=> {
-      conn.write('Move: left');
-    }, 500)
-
-    setInterval(() => {
-      conn.write('Move: up');
-    }, 500)
+    // setInterval(() => {
+    //   conn.write('Move: up');
+    // }, 500)
     // code that does something when the connection is first established
   });
   // interpret incoming data as text
