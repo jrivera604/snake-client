@@ -25,10 +25,10 @@ Clone server via Terminal:
 - Terminal commands:`npm run play`
 - Run the development snake client using the `node play.js` command.
 - Controls = 
-  `W` for up
-  `A` for left
-  `S` for down
-  `D` for right
-  `E` for taunt
-  `R` for secondary taunt
-  `ctrl+c` to exit game session
+  - `W` for up
+  - `A` for left
+  - `S` for down
+  - `D` for right
+  - `E` for taunt
+  - `R` for secondary taunt
+  - `ctrl+c` to exit game session
