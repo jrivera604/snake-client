@@ -1,3 +1,4 @@
+const { connect } = require("http2");
 
 let connection;
 
@@ -35,6 +36,10 @@ const handleUserInput = function (key) {
   if (key === 's') {
     connection.write('Move: down')
     console.log(key)
+  }
+
+  if (key === 'r') {
+    connection.write('Say: Noob')
   }
 
 };
