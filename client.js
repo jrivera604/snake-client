@@ -6,17 +6,15 @@ const connect = function () {
     host: IP,
     port: PORT,
   });
+   // interpret incoming data as text
+  conn.setEncoding("utf8");
+  // connection to the server
   conn.on("connect", () => {
-    conn.write('JRR');
+    conn.write('JR');
     console.log("Successfully connected to game server");
 
-    // setInterval(() => {
-    //   conn.write('Move: up');
-    // }, 500)
-    // code that does something when the connection is first established
   });
-  // interpret incoming data as text
-  conn.setEncoding("utf8");
+ 
   
   return conn;
 };
